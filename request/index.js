@@ -11,6 +11,7 @@ require("./startup/logging.js")();
 require("./startup/db.js")();
 require("./startup/routes.js")(app);
 require("./startup/eureka.js")();
+require("./startup/prod.js")(app);
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, ()=>{
